@@ -5,10 +5,6 @@ export const dynamic = "force-dynamic";
 
 const taskResults = new Map<string, string>();
 
-export function getTaskResult(taskId: string): string | undefined {
-  return taskResults.get(taskId);
-}
-
 export async function POST(request: NextRequest) {
   try {
     const body = (await request.json()) as {
