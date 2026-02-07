@@ -19,7 +19,10 @@ const lora = Lora({
   subsets: ['latin']
 });
 
+const OG_IMAGE = 'https://ik.imagekit.io/olegchursin/truth-tribune-3_i36BfH2QY.png';
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://truth-tribune.olegchursin.com'),
   title: 'Truth Tribune',
   description: 'The truth, as you see it.',
   applicationName: 'Truth Tribune',
@@ -28,6 +31,19 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: 'default',
     title: 'Truth Tribune'
+  },
+  openGraph: {
+    url: 'https://truth-tribune.olegchursin.com/',
+    type: 'website',
+    title: 'Truth Tribune',
+    description: 'The truth, as you see it.',
+    images: [{ url: OG_IMAGE }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Truth Tribune',
+    description: 'The truth, as you see it.',
+    images: [OG_IMAGE]
   }
 };
 
