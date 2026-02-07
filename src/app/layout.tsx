@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono, Lora } from 'next/font/google';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -22,7 +22,17 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: 'Truth Tribune',
   description: 'The truth, as you see it.',
-  icons: { icon: '/tt-logo-square-dark.svg' }
+  applicationName: 'Truth Tribune',
+  icons: { icon: '/tt-logo-square-dark.svg' },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Truth Tribune'
+  }
+};
+
+export const viewport: Viewport = {
+  themeColor: '#0a0a0a'
 };
 
 export default function RootLayout({

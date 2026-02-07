@@ -14,6 +14,10 @@
 # testing
 /coverage
 
+# Serwist
+public/sw*
+public/swe-worker*
+
 # next.js
 /.next/
 /out/
