@@ -14,8 +14,8 @@ export async function GET(request: Request) {
   try {
     const results = await fetchAndRewriteAllNews();
     return NextResponse.json({
-      success: true,
       ...results,
+      ok: true,
       timestamp: new Date().toISOString(),
     });
   } catch (error) {
